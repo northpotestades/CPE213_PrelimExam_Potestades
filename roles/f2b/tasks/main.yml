@@ -1,0 +1,18 @@
+---
+- name: Install F2B
+  apt:
+    name: fail2ban
+    state: present
+
+- name: Copy local jain file to server
+  copy:
+    src: /etc/fail2ban/jail.local
+    dest: /etc/fail2ban/jail.local
+    owner: root
+    group: root
+    mode: 0644
+  become: yes
+
+- name: Reboot server
+  reboot:
+    reboot_timeout: 180

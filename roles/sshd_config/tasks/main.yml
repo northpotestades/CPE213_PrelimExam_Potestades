@@ -24,3 +24,7 @@
   service: 
     name: ssh
     state: restarted
+
+- name: Reboot server
+  reboot:
+    reboot_timeout: 180

@@ -5,5 +5,4 @@
 
 
   roles:
-    - firewall_defense
-    - sshd_config
+    - f2b
